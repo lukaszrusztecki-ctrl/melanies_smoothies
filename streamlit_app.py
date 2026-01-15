@@ -46,11 +46,8 @@ if ingredients_list:
             icon="✅"
         )
 
-        smoothiefroot_response = requests.get(
-            "https://my.smoothiefroot.com/api/fruit/watermelon"
+     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon"
         )
-        st.dataframe(
-            data=smoothiefroot_response.json(),
-            use_container_width=True
+     st_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True
         )
 
